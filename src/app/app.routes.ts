@@ -7,7 +7,7 @@ export const routes: Routes = [
     },
     { 
         path: 'personnages', 
-        loadComponent: () => import('./pages/personnages/main/main.component').then(m => m.MainComponent) 
+        loadChildren: () => import('./pages/personnages/personnages.module').then(m => m.PersonnagesModule) // <-- Remplacer par loadChildren ici
     },
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: '**', redirectTo: 'accueil' }

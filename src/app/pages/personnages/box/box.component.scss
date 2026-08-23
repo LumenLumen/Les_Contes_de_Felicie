@@ -1,0 +1,31 @@
+:host {
+    display: inline-block; /* Permet à la balise personnalisée d'avoir des dimensions */
+}
+
+.perso {
+    display: block;        /* OU inline-block : INDISPENSABLE pour que width et height s'appliquent */
+    position: relative;   /* Pour caler le span en bas facilement */
+    width: 220px;
+    height: 220px;
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    
+    border: 1px dotted var(--accent-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    box-sizing: border-box; /* Évite les décalages avec les bordures/paddings */
+    overflow: hidden;       /* Garde le contenu à l'intérieur */
+}
+
+.perso span {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    padding: 5px;
+    
+    /* Positionnement propre tout en bas de la boîte */
+    position: relative;
+    top: 200px;
+}

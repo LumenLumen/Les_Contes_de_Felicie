@@ -1,0 +1,8 @@
+<a class="perso" [routerLink]="['/personnages', perso.toLowerCase()
+.replaceAll('é', 'e')
+.replaceAll('è', 'e')
+.replaceAll('æ', 'ae')
+.replaceAll('-', '')
+]" [style.background-image]="'url(' + img + ')'">
+    <span>{{ perso }}</span>
+</a>
