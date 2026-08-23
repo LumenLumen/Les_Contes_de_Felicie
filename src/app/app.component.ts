@@ -1,13 +1,16 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CoreModule } from './core/core.module';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet],
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
-    styleUrl: './app.component.scss'
+    styleUrl: './app.component.scss',
+    imports: [
+      RouterOutlet
+    ]
 })
 export class AppComponent {
-  title = 'Les_Contes_de_Felicie';
+  title = 'Les Contes de Félicie';
 }

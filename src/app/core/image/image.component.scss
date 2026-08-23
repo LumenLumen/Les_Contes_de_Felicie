@@ -1,0 +1,38 @@
+:host {
+    display: inline-block; /* ou block selon tes besoins */
+    position: relative;    /* Référence pour le position: absolute du tooltip */
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 10;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltip-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Affiche le tooltip au survol du composant */
+:host:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
