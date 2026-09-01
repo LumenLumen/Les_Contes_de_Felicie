@@ -1,0 +1,38 @@
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.flex-row__media {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+.flex-row__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-row__text {
+    flex: 1 1 0;
+}
+
+/* Optionnel : passage en colonne sur mobile */
+@media (max-width: 768px) {
+    .flex-row,
+    .flex-row.reverse {
+        flex-direction: column;
+    }
+
+    .flex-row__media {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,5 +1,5 @@
 :host {
-    display: inline-block; /* ou block selon tes besoins */
+    display: block; /* ou block selon tes besoins */
     position: relative;    /* Référence pour le position: absolute du tooltip */
     cursor: pointer;
 }

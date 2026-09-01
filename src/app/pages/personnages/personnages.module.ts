@@ -11,11 +11,22 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SolemeComponent
+  ],
   imports: [
     CommonModule,
     CoreModule,
     RouterModule.forChild(routes)
-  ]
+  ],
 })
-export class PersonnagesModule { }
+export class PersonnagesModule {
+  currentLang: 'en' | 'fr' = 'fr';
+
+  selectLang(lang: 'en' | 'fr', event?: Event): void {
+    if (event) {
+      event.preventDefault(); // Évite le comportement d'ancrage par défaut du lien
+    }
+    this.currentLang = lang;
+  }
+}

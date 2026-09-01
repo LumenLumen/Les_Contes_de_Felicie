@@ -1,0 +1,22 @@
+.encadre {
+    border: 3px dotted var(--main-color);
+    border-radius:10px;
+    padding:10px;
+    max-width:700px;
+    margin:auto;
+    text-align:justify;
+}
+
+.size {
+    text-align: center;
+    padding: 5px;
+}
+
+.resume {
+    font-size: 18px;
+    padding: 5px;
+}
+
+p {
+    color: var(--tertiary-color)
+}
