@@ -4,15 +4,18 @@ import { CoreModule } from '../../core/core.module';
 import { MainComponent } from './main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SolemeComponent } from './liste/soleme/soleme.component';
+import { TxikiComponent } from './liste/txiki/txiki.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'soleme', component: SolemeComponent },
+  { path: 'txiki', component: TxikiComponent },
 ];
 
 @NgModule({
   declarations: [
-    SolemeComponent
+    SolemeComponent,
+    TxikiComponent
   ],
   imports: [
     CommonModule,

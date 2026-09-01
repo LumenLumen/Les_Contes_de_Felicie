@@ -6,6 +6,10 @@ export const ARTISTS : Artist[] = [
         lien :"https://lumenlumen.github.io/CoinDessin/accueil"
     },
     {
+        nom : "fyrenos",
+        lien :"https://toyhou.se/fyrenos"
+    },
+    {
         nom : "MadPixelle",
         lien : "https://madpixelle-link.carrd.co/"
     },
