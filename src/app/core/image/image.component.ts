@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { ARTISTS } from './artist-mock';
+import { Component, Input, OnInit } from '@angular/core';
+import { ARTISTS } from './artist-mock'; // Adapte le chemin si besoin
 
 @Component({
   selector: 'app-image',
@@ -7,11 +7,14 @@ import { ARTISTS } from './artist-mock';
   templateUrl: './image.component.html',
   standalone: false,
 })
-export class ImageComponent {
+export class ImageComponent implements OnInit {
 
   @Input() img !: String ;
   @Input() alt !: String ;
   @Input() artist !: String ;
+  @Input() spoiler: boolean = false; // Désactivé par défaut
+  
+  isRevealed: boolean = false;
   lien = "";
 
   ngOnInit(): void {
@@ -20,10 +23,12 @@ export class ImageComponent {
     }
   }
 
-  /**
-   * Recherche un artiste par son nom et retourne son lien.
-   * Retourne une chaîne vide si l'artiste n'est pas trouvé.
-   */
+  revealSpoiler(): void {
+    if (this.spoiler) {
+      this.isRevealed = true;
+    }
+  }
+
   getArtistLink(name: String): string {
     const found = ARTISTS.find(a => a.nom.toLowerCase() === name.toLowerCase());
     return found ? found.lien : '';

@@ -24,5 +24,21 @@ export const ARTISTS : Artist[] = [
     {
         nom : "Velichorus",
         lien : "https://linktr.ee/velichorus"
+    },
+    {
+        nom : "Rosvarinn",
+        lien : "https://www.instagram.com/rosvarinn/"
+    },
+    {
+        nom : "MistyGoldArt",
+        lien : "https://toyhou.se/MistyGoldArt"
+    },
+    {
+        nom : "zoup",
+        lien : "https://toyhou.se/puoz"
+    },
+    {
+        nom : "Yhmay",
+        lien : "https://www.instagram.com/yhmay84?igsi=cDh4NTF5cTJhZDZj"
     }
 ]

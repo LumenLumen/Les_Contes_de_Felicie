@@ -5,17 +5,32 @@ import { MainComponent } from './main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SolemeComponent } from './liste/soleme/soleme.component';
 import { TxikiComponent } from './liste/txiki/txiki.component';
+import { LueurComponent } from './liste/lueur/lueur.component';
+import { LinjaComponent } from './liste/linja/linja.component';
+import { MielleComponent } from './liste/mielle/mielle.component';
+import { ZorigaitzaComponent } from './liste/zorigaitza/zorigaitza.component';
+import { BusterComponent } from './liste/buster/buster.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'soleme', component: SolemeComponent },
   { path: 'txiki', component: TxikiComponent },
+  { path: 'lueur', component: LueurComponent },
+  { path: 'linja', component: LinjaComponent },
+  { path: 'mielle', component: MielleComponent},
+  { path: 'zorigaitza', component: ZorigaitzaComponent},
+  { path: 'buster', component: BusterComponent},
 ];
 
 @NgModule({
   declarations: [
     SolemeComponent,
-    TxikiComponent
+    TxikiComponent,
+    LueurComponent,
+    LinjaComponent,
+    MielleComponent,
+    ZorigaitzaComponent,
+    BusterComponent,
   ],
   imports: [
     CommonModule,
