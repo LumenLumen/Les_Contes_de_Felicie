@@ -1,0 +1,90 @@
+<div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup-content">
+        <app-langtab>
+            <div lang-en>
+                <div class="warnings-filter-section" *ngIf="selectedWarns.length > 0">
+                    <h2>Warnings</h2>
+                    <p>This profile features the following content:</p>
+                    <ul>
+                        <li *ngFor="let warn of selectedWarns">
+                        {{ warn.label }}
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Before drawing this character...</h2>
+
+                <table>
+                    <tr>
+                        <td>Gore</td>
+                        <td class="j">Lore-related only</td>
+                    </tr>
+                    <tr>
+                        <td>NSFW</td>
+                        <td class="o">Ask first</td>
+                    </tr>
+                    <tr>
+                        <td>Emotionnal/vent art</td>
+                        <td class="v">YES!</td>
+                    </tr>
+                    <tr>
+                        <td>Political & religious symbols</td>
+                        <td class="j">Lore-related only</td>
+                    </tr>
+                </table><br>
+
+                <ul>
+                    <li>Stick to the design: do not change their gender, skin color, species, body type, etc. Fit to their personnality as well!</li>
+                    <li>You are not required to follow the ideas listed in the dedicated section — they are meant for inspiration.</li>
+                    <li>Do not depict with anything that doesn't fit their universe.</li>
+                    <li>If depicted alongside other characters, please respect the size ratio between them.</li>
+                </ul>
+            </div>
+            <div lang-fr>
+                <div class="warnings-filter-section" *ngIf="selectedWarns.length > 0">
+                    <h2>Avertissements</h2>
+                    <p>Ce profil contient :</p>
+                    <ul>
+                        <li *ngFor="let warn of selectedWarns">
+                        {{ warn.libelle }}
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <h2>Avant de dessiner ce personnage...</h2>
+
+                <table>
+                    <tr>
+                        <td>Gore</td>
+                        <td class="j">Lié au lore uniquement</td>
+                    </tr>
+                    <tr>
+                        <td>NSFW</td>
+                        <td class="o">Demander d'abord</td>
+                    </tr>
+                    <tr>
+                        <td>Scène émotionnelle</td>
+                        <td class="v">OUI !</td>
+                    </tr>
+                    <tr>
+                        <td>Symboles politiques ou religieux</td>
+                        <td class="j">Lié au lore uniquement</td>
+                    </tr>
+                </table><br>
+
+                <ul>
+                    <li>Respectez le design du personnage : ne changez pas son genre, sa couleur de peau, son espèce, sa corpulence, etc. Respectez également à sa personnalité !</li>
+                    <li>Vous n'êtes pas obligé·e de suivre les idées listées dans la section dédiée — elles sont là pour l'inspiration.</li>
+                    <li>Ne représentez pas ce personnage avec des éléments qui ne correspondent pas à son univers.</li>
+                    <li>Si vous représentez ce personnage avec d'autres personnages, merci de respecter le rapport de taille entre eux.</li>
+                </ul>
+            </div>
+        </app-langtab>
+
+        <!-- Bouton de validation utilisateur pour fermer la pop-up -->
+        <div class="popup-actions">
+            <button (click)="validate()" class="btn-validate">OK</button>
+        </div>
+
+    </div>
+</div>

@@ -10,6 +10,8 @@ import { LinjaComponent } from './liste/linja/linja.component';
 import { MielleComponent } from './liste/mielle/mielle.component';
 import { ZorigaitzaComponent } from './liste/zorigaitza/zorigaitza.component';
 import { BusterComponent } from './liste/buster/buster.component';
+import { MiloComponent } from './liste/milo/milo.component';
+import { ThooComponent } from './liste/thoo/thoo.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'mielle', component: MielleComponent},
   { path: 'zorigaitza', component: ZorigaitzaComponent},
   { path: 'buster', component: BusterComponent},
+  { path: 'milo', component: MiloComponent},
+  { path: 'thoo', component: ThooComponent}
 ];
 
 @NgModule({
@@ -31,6 +35,8 @@ const routes: Routes = [
     MielleComponent,
     ZorigaitzaComponent,
     BusterComponent,
+    MiloComponent,
+    ThooComponent,
   ],
   imports: [
     CommonModule,

@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ImageComponent } from './image/image.component';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ɵEmptyOutletComponent } from '@angular/router';
 import { LangTabComponent } from './lang-tab/lang-tab.component';
 import { BulletlistComponent } from './bulletlist/bulletlist.component';
 import { EncadreComponent } from './encadre/encadre.component';
 import { FlexboxComponent } from './flexbox/flexbox.component';
 import { BackarrowComponent } from './backarrow/backarrow.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { BackarrowComponent } from './backarrow/backarrow.component';
     BulletlistComponent,
     EncadreComponent,
     FlexboxComponent,
-    BackarrowComponent
+    BackarrowComponent,
+    PopupComponent
   ],
   imports: [
     CommonModule,
-    RouterLink
-  ],
+    RouterLink,
+    ɵEmptyOutletComponent
+],
   exports: [
     HeaderComponent,
     ImageComponent,
@@ -30,7 +33,8 @@ import { BackarrowComponent } from './backarrow/backarrow.component';
     BulletlistComponent,
     EncadreComponent,
     FlexboxComponent,
-    BackarrowComponent
+    BackarrowComponent,
+    PopupComponent
   ]
 })
 export class CoreModule { }
