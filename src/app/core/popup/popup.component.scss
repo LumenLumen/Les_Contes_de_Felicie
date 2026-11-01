@@ -16,14 +16,13 @@
     padding: 2rem;
     border-radius: 8px;
     max-width: 600px;
-    width: 90%;
+    width: 95%;
     max-height: 85vh;
     overflow-y: auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .popup-actions {
-    margin-top: 1.5rem;
     text-align: center;
 
     .btn-validate {
@@ -48,27 +47,15 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
 }
 
 td {
     padding: 0.5rem;
     border: 1px solid var(--tertiary-color);
+    width: 50%;
 }
 
 p, li, td {
     color: var(--tertiary-color);
     text-align: justify;
-}
-
-.j {
-    background-color: #d4b055; 
-}
-
-.o {
-    background-color: #d37b40; 
-}
-
-.v {
-    background-color: #9ac44d;
 }

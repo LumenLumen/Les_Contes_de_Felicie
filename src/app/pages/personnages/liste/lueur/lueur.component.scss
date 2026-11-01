@@ -4,3 +4,12 @@
     --secondary-color : #ff983c;
     --tertiary-color: #2e2130;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color);
+    text-shadow: 0px 0px 4px var(--secondary-color);
+}
+
+p {
+    color: var(--tertiary-color);
+}
