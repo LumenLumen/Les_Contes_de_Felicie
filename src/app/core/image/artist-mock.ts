@@ -22,6 +22,10 @@ export const ARTISTS : Artist[] = [
         lien : "https://artfight.net/~BakaSorcery"
     },
     {
+        nom : "Nholae",
+        lien : "https://nholae.carrd.co/"
+    },
+    {
         nom : "Yor",
         lien : "https://toyhou.se/Yor"
     },
@@ -72,5 +76,9 @@ export const ARTISTS : Artist[] = [
     {
         nom : "Shauku",
         lien : "https://www.instagram.com/shauku.art/?hl=fr"
+    },
+    {
+        nom : "MAGGOTEATER",
+        lien : "https://www1.flightrising.com/clan-profile/666164"
     }
 ]

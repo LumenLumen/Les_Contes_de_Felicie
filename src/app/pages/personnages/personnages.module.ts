@@ -12,6 +12,7 @@ import { ZorigaitzaComponent } from './liste/zorigaitza/zorigaitza.component';
 import { BusterComponent } from './liste/buster/buster.component';
 import { MiloComponent } from './liste/milo/milo.component';
 import { ThooComponent } from './liste/thoo/thoo.component';
+import { HegalComponent } from './liste/hegal/hegal.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'zorigaitza', component: ZorigaitzaComponent},
   { path: 'buster', component: BusterComponent},
   { path: 'milo', component: MiloComponent},
-  { path: 'thoo', component: ThooComponent}
+  { path: 'thoo', component: ThooComponent},
+  { path: 'hegal', component: HegalComponent}
 ];
 
 @NgModule({
@@ -37,6 +39,7 @@ const routes: Routes = [
     BusterComponent,
     MiloComponent,
     ThooComponent,
+    HegalComponent,
   ],
   imports: [
     CommonModule,
