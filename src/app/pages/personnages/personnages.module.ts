@@ -13,6 +13,10 @@ import { BusterComponent } from './liste/buster/buster.component';
 import { MiloComponent } from './liste/milo/milo.component';
 import { ThooComponent } from './liste/thoo/thoo.component';
 import { HegalComponent } from './liste/hegal/hegal.component';
+import { KaosaComponent } from './liste/kaosa/kaosa.component';
+import { KermeComponent } from './liste/kerme/kerme.component';
+import { MedienComponent } from './liste/medien/medien.component';
+import { PigneComponent } from './liste/pigne/pigne.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -25,7 +29,11 @@ const routes: Routes = [
   { path: 'buster', component: BusterComponent},
   { path: 'milo', component: MiloComponent},
   { path: 'thoo', component: ThooComponent},
-  { path: 'hegal', component: HegalComponent}
+  { path: 'hegal', component: HegalComponent},
+  { path: 'kaosa', component: KaosaComponent},
+  { path: 'kerme', component: KermeComponent},
+  { path: 'medien', component: MedienComponent},
+  { path: 'pigne', component: PigneComponent}
 ];
 
 @NgModule({
@@ -40,6 +48,10 @@ const routes: Routes = [
     MiloComponent,
     ThooComponent,
     HegalComponent,
+    KaosaComponent,
+    KermeComponent,
+    MedienComponent,
+    PigneComponent
   ],
   imports: [
     CommonModule,

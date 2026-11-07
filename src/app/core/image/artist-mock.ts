@@ -80,5 +80,33 @@ export const ARTISTS : Artist[] = [
     {
         nom : "MAGGOTEATER",
         lien : "https://www1.flightrising.com/clan-profile/666164"
+    },
+    {
+        nom : "Hadari",
+        lien : "https://artfight.net/~Hadari"
+    },
+    {
+        nom : "ca10draws",
+        lien : "https://ko-fi.com/ca10draws"
+    },
+    {
+        nom : "Necro",
+        lien : "https://artfight.net/~Necro_kms"
+    },
+    {
+        nom : "miilchka",
+        lien : "https://toyhou.se/miilchka"
+    },
+    {
+        nom : "todayisdeadinside",
+        lien : "https://toyhou.se/todayisdeadinside"
+    },
+    {
+        nom : "YYGemini",
+        lien : "https://vgen.co/YYGemini"
+    },
+    {
+        nom : "VultureWings_",
+        lien : "https://toyhou.se/VultureWings_"
     }
 ]

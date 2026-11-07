@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { BasePersonnageComponent } from '../personnage.component';
 
 @Component({
-  imports: [],
+  standalone: false,
   selector: 'app-medien',
   styleUrl: './medien.component.scss',
   templateUrl: './medien.component.html',
 })
-export class MedienComponent {
+export class MedienComponent extends BasePersonnageComponent{
+  themeColor = '#f3c992';
 }

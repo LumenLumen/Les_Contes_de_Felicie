@@ -1,1 +1,138 @@
-<p>kerme works!</p>
+<app-backarrow></app-backarrow>
+<app-popup [warningIds]="[1, 2]"></app-popup>
+<app-image img="assets/Kerme/header.gif" alt="header" artist="Newni"></app-image>
+
+<app-langtab>
+    <div lang-en>
+        <app-encadre age="34 years old" size="6.9 ft" 
+            desc="Kerme has been a supervisor at the orphanage since it opened. He comes from another continent, from another nation for which he used to be a soldier. He has been living in Félicie for eight years and returns to see his family every year.">
+        </app-encadre>
+        <app-bulletlist titre="MAGIC" [items]="[
+            'Kerme can manipulate sand and dust as he pleases.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="NOTES" [items]="[
+            'Kerme has numerous PTSD symptoms inherited from his life as a soldier, such as phases of hyper-vigilance or flashbacks.',
+            'Otherwise, Kerme is a relaxed and cool person. He is accommodating and understanding with others. However, he has a sense of responsibility and knows how to be serious. You can sometimes feel his very structured side as a former soldier.',
+            'Kerme likes to imitate feminine voices and entertain the crowd.',
+            'Kerme often tells legends of his country to the orphanage residents, illustrating them with shapes made of sand or dust.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="IDEAS" [items]="[
+            'Kerme learning sign language from Soren. They get along well, and Kerme tries to take an interest in this language.', 
+            'Kerme watching over the orphanage while everyone is asleep. It is nighttime.',
+            'Kerme writing a letter to his family. He often adds small objects or a few pinches of sand to it.',
+            'Kerme, facing the ocean, thinking of his homeland. It is a desert country.'
+            ]">
+        </app-bulletlist>
+        <br>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/ref.png" alt="Référence" artist="miilchka"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="DAILY OUTFIT" [items]="[
+                    'Kerme wears this outfit when he is at the orphanage or when he is outside.',
+                    'The patterns on his clothing can be modified; they can be grayish or in warm colors (tan to brown).'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/NSFW_ref.png" alt="Référence" artist="Newni" [spoiler]="true"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="NSFW REF" [items]="[
+                    'Kerme has a magical scar on his leg. It is the mark of three projectile impacts. This scar glows slightly in the dark. He received it when he was a soldier.',
+                    'Kerme\'s body hair and head hair darken with age. The two tufts on each side of his head are long, floppy ears (like a dachshund\'s).'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/soldier_ref.png" alt="Référence" artist="miilchka"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="SOLDIER OUTFIT" [items]="[
+                    'He was wearing this uniform when he was a soldier, while training.',
+                    'Don\'t draw him in this outfit around other characters since he didn\'t know them at that time !!'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+    </div>
+
+    <div lang-fr>
+        <app-encadre age="34 ans" size="206 cm" 
+            desc="Kerme est surveillant à l'orphelinat depuis son ouverture. Il vient d'un autre continent, d'une autre nation pour laquelle il a été soldat. Cela fait huit ans qu'il vit à Félicie et il retourne voir sa famille tous les ans.">
+        </app-encadre>
+        <app-bulletlist titre="MAGIE" [items]="[
+            'Kerme peut manipuler le sable et la poussière à sa guise.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="NOTES" [items]="[
+            'Kerme a de nombreux PTSD hérités de sa vie de soldat tels que des phases d\'hyper-vigilance ou des reviviscences.', 
+            'Kerme est sinon quelqu\'un de détendu et cool. Il est arrangeant et compréhensif avec les autres. Il a pour autant le sens des responsabilités et sait se montrer sérieux. On sent parfois son côté très droit d\'ancien soldat.',
+            'Kerme aime imiter des voix féminines et amuser la galerie.',
+            'Kerme raconte souvent les légendes de son pays aux résidents de l\'orphelinat en les illustrant avec des formes de sable ou de poussière.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="IDÉES" [items]="[
+            'Kerme apprend la langue des signes auprès de Soren. Ils s\'entendent bien tous les deux et Kerme essaie de s\'intéresser à ce langage.', 
+            'Kerme surveille l\'orphelinat tandis que tout le monde dort. Il fait nuit.',
+            'Kerme écrit une lettre à sa famille. Il y ajoute souvent des petits objets ou quelques pincées de sable.',
+            'Kerme, face à l\'océan, pense à sa terre natale. C\'est un pays désertique.'
+            ]">
+        </app-bulletlist>
+        <br>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/ref.png" alt="Référence" artist="miilchka"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="DAILY OUTFIT" [items]="[
+                    'Kerme porte cette tenue lorsqu\'il est à l\'orphelinat ou lorsqu\'il est dehors.',
+                    'Les motifs sur ses vêtements peuvent être modifiés ; ils peuvent être grisâtres ou dans des tons chauds (roux à marron).'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/NSFW_ref.png" alt="Référence" artist="Newni" [spoiler]="true"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="NSFW REF" [items]="[
+                    'Kerme a une cicatrice magique sur sa jambe. C\'est la marque de trois impacts de projectiles. Cette cicatrice brille légèrement dans le noir. Il l\'a reçue lorsqu\'il était soldat.',
+                    'Les poils de son corps et de sa tête s\'assombrissent avec l\'âge. Les deux touffes de chaque côté de sa tête sont de longues oreilles tombantes (comme celles d\'un teckel).'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kerme/soldier_ref.png" alt="Référence" artist="miilchka"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="SOLDIER OUTFIT" [items]="[
+                    'Il portait cet uniforme lorsqu\'il était soldat, lors de ses entraînements.',
+                    'Ne le dessinez pas dans cette tenue autour d\'autres personnages puisqu\'il ne les connaissait pas à cette époque !!'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+    </div>
+</app-langtab>
+
+<app-image img="assets/Kerme/header.gif" alt="header" artist="Newni"></app-image>
+
+<br><h1>Galerie</h1>
+<app-image img="assets/Kerme/Necro.webp" alt="Necro" artist="Necro"></app-image>
+
+<br><h1>Crédits</h1>
+<p>
+    Création du personnage : <a href="https://lumenlumen.github.io/CoinDessin/accueil">Newni</a>.<br>
+    Design du personnage : <a href="https://lumenlumen.github.io/CoinDessin/accueil">Newni</a>.
+</p>

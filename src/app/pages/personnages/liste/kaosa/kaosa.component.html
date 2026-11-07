@@ -1,1 +1,139 @@
-<p>kaosa works!</p>
+<app-backarrow></app-backarrow>
+<app-popup [warningIds]="[1]"></app-popup>
+<app-image img="assets/Kaosa/ca10draws.png" alt="header" artist="ca10draws"></app-image>
+
+<app-langtab>
+    <div lang-en>
+        <app-encadre age="25 years old" size="6.6 ft" 
+            desc="Kaosa is a breeder and notably takes care of the herbalist shop's griffins. She is Ezer's sister. She has a dog named Flint.">
+        </app-encadre>
+        <app-bulletlist titre="MAGIC" [items]="[
+            'Kaosa is a were-panther.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="NOTES" [items]="[
+            'Kaosa is energetic and welcoming. She loves company and staying active.',
+            'Kaosa plays the pan flute.',
+            'Kaosa loves wide open spaces and going for walks. She appreciates nature and manual activities.',
+            'She has a dog named Flint.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="IDEAS" [items]="[
+            'Kaosa running, completely happy and carefree, across the meadows. Flint can be with her.', 
+            'Kaosa preparing food for the griffins.',
+            'Kaosa climbing a tree to look out at the landscape.'
+            ]">
+        </app-bulletlist>
+        <br>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/work_outfit.png" alt="Référence" artist="Newni"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="WORK OUTFIT" [items]="[
+                    'Kaosa\'s hair can be more or less messy/shaggy. Her feathers are mandatory.',
+                    'She often carries a bag with her, it contains food and awards for the griffins.',
+                    'She wears gloves to protect herself from bites and scratches.'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/occasional_outfit.png" alt="Référence" artist="Newni"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="OCCASION OUTFIT" [items]="[
+                    'Her feathers are mandatory.',
+                    'Her make-up doesn\'t have to be accurate. It is globally made of curves and laces. She enjoys painting her skin a lot.'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/nude_ref.png" alt="Référence" artist="Newni" [spoiler]="true"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="NUDE REF" [items]="[
+                    'Kaosa has a few scars from her work.',
+                    'She has a bit of pilosity on her arms and legs.',
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+    </div>
+
+    <div lang-fr>
+        <app-encadre age="25 ans" size="198cm" 
+            desc="Kaosa est éleveuse et s'occupe notamment des griffons de l'herboristerie. Elle est la sœur d'Ezer. Elle a un chien nommé Flint.">
+        </app-encadre>
+        <app-bulletlist titre="MAGIE" [items]="[
+            'Kaosa est une panthère-garou.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="NOTES" [items]="[
+            'Kaosa est énergique et avenante. Elle aime la compagnie et le mouvement.', 
+            'Hegal déteste son apparence et préféra bien souvent rester invisible.',
+            'Kaosa joue de la flûte de pan.',
+            'Kaosa aime les grands espaces et se promener. Elle apprécie la nature et les activités manuelles.',
+            'Elle a un chien nommé Flint.'
+            ]">
+        </app-bulletlist>
+        <app-bulletlist titre="IDÉES" [items]="[
+            'Kaosa court, toute heureuse et insouciante, à travers les prairies. Flint peut être avec elle.', 
+            'Kaosa prépare à manger pour les griffons.',
+            'Kaosa grimpe dans un arbre pour observer le paysage.'
+            ]">
+        </app-bulletlist>
+        <br>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/work_outfit.png" alt="Référence" artist="Newni"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="TENUE DE TRAVAIL" [items]="[
+                    'Les cheveux de Kaosa peuvent être plus ou moins ébouriffés. Ses plumes sont obligatoires.',
+                    'Elle porte souvent un sac avec elle, il contient de la nourriture et des récompenses pour les griffons.',
+                    'Elle porte des gants pour se protéger des morsures et des griffures.'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/occasional_outfit.png" alt="Référence" artist="Newni"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="TENUE POUR LES OCCASIONS" [items]="[
+                    'Ses plumes sont obligatoires.',
+                    'Son maquillage n\'a pas besoin d\'être précis. Il est globalement fait de courbes et de lacets. Elle aime beaucoup se peindre la peau.'
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+        <app-flexbox sidePosition="left">
+            <div side>
+                <app-image img="assets/Kaosa/nude_ref.png" alt="Référence" artist="Newni" [spoiler]="true"></app-image>
+            </div>
+            <div content>
+                <app-bulletlist titre="NUE" [items]="[
+                    'Kaosa a quelques cicatrices de son travail.',
+                    'Elle a un peu de pilosité sur les bras et les jambes.',
+                    ]">
+                </app-bulletlist>
+            </div>
+        </app-flexbox>
+    </div>
+</app-langtab>
+
+<app-image img="assets/Kaosa/ca10draws.png" alt="header" artist="ca10draws"></app-image>
+
+<br><h1>Galerie</h1>
+<app-image img="assets/Kaosa/Hadari.gif" alt="Hadari" artist="Hadari"></app-image>
+
+<br><h1>Crédits</h1>
+<p>
+    Création du personnage : <a href="https://lumenlumen.github.io/CoinDessin/accueil">Newni</a>.<br>
+    Design du personnage : <a href="https://lumenlumen.github.io/CoinDessin/accueil">Newni</a>.
+</p>

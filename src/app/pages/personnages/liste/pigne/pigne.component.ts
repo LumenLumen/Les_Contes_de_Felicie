@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { BasePersonnageComponent } from '../personnage.component';
 
 @Component({
-  imports: [],
+  standalone: false,
   selector: 'app-pigne',
   styleUrl: './pigne.component.scss',
   templateUrl: './pigne.component.html',
 })
-export class PigneComponent {
+export class PigneComponent extends BasePersonnageComponent{
+  themeColor = '#e0dce5';
 }
