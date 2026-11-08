@@ -108,5 +108,17 @@ export const ARTISTS : Artist[] = [
     {
         nom : "VultureWings_",
         lien : "https://toyhou.se/VultureWings_"
+    },
+    {
+        nom : "dioonhe0658",
+        lien : "https://ko-fi.com/dioonhe0658"
+    },
+    {
+        nom :"TheGreenPlant",
+        lien :"https://toyhou.se/TheGreenPlant"
+    },
+    {
+        nom : "sugarcube",
+        lien : "https://flightrising.com/main.php?p=lair&tab=userpage&id=288336"
     }
 ]

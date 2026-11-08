@@ -17,6 +17,7 @@ import { KaosaComponent } from './liste/kaosa/kaosa.component';
 import { KermeComponent } from './liste/kerme/kerme.component';
 import { MedienComponent } from './liste/medien/medien.component';
 import { PigneComponent } from './liste/pigne/pigne.component';
+import { GrimgrimComponent } from './liste/grimgrim/grimgrim.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'kaosa', component: KaosaComponent},
   { path: 'kerme', component: KermeComponent},
   { path: 'medien', component: MedienComponent},
-  { path: 'pigne', component: PigneComponent}
+  { path: 'pigne', component: PigneComponent},
+  { path: 'grimgrim', component: GrimgrimComponent}
 ];
 
 @NgModule({
@@ -51,7 +53,8 @@ const routes: Routes = [
     KaosaComponent,
     KermeComponent,
     MedienComponent,
-    PigneComponent
+    PigneComponent,
+    GrimgrimComponent
   ],
   imports: [
     CommonModule,
