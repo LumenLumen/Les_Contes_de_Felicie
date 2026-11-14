@@ -1,0 +1,245 @@
+$hearts-column-width: 36px;
+$mobile-breakpoint: 768px;
+
+.relation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.relation-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+
+  // Sur la seconde ligne (desktop), on inverse l'ordre visuel pour que
+  // la bulle soit à gauche et l'icône à droite comme sur le croquis.
+  &--second {
+    justify-content: flex-end;
+  }
+}
+
+.relation-icon-box {
+  flex: 0 0 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.speech-bubble {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 200px;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+
+  // Pointe orientée vers l'icône de gauche
+  &--left-tail::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 12px solid var(--accent-color);
+  }
+
+  // Pointe orientée vers l'icône de droite
+  &--right-tail::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 12px solid var(--accent-color);
+  }
+
+  // Espace réservé pour ne jamais chevaucher les 5 cœurs
+  &.hearts-on-right {
+    padding-right: calc(#{$hearts-column-width} + 12px);
+  }
+
+  &.hearts-on-left {
+    padding-left: calc(#{$hearts-column-width} + 12px);
+  }
+}
+
+.bubble-scroll {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.bubble-text {
+  margin: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.broken-hearts-column {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: $hearts-column-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.4rem 0;
+  pointer-events: none;
+
+  .hearts-on-right & {
+    right: -18px;
+  }
+
+  .hearts-on-left & {
+    left: -18px;
+  }
+}
+
+.broken-heart {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+
+  // Contour visible mais discret pour les cœurs vides (notes 5 ou emplacements restants)
+  .heart-intact,
+  .heart-broken-body {
+    fill: transparent;
+    stroke: var(--accent-color);
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+    opacity: 0.45;
+    transition: fill 0.2s ease, stroke 0.2s ease, opacity 0.2s ease;
+  }
+
+  .heart-crack {
+    fill: none;
+    stroke: var(--accent-color-darker);
+    stroke-width: 1.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.65;
+  }
+}
+
+// Cœur brisé rempli (notes < 5)
+.broken-heart.is-broken-full .heart-svg {
+  .heart-broken-body {
+    fill: var(--accent-color-light);
+    stroke: var(--accent-color-darker);
+    opacity: 1;
+  }
+
+  .heart-crack {
+    stroke: var(--accent-color-darker);
+    opacity: 1;
+  }
+}
+
+// Cœur entier rempli (notes > 5)
+.broken-heart.is-intact-full .heart-svg {
+  .heart-intact {
+    fill: var(--accent-color-light);
+    stroke: var(--accent-color-darker);
+    opacity: 1;
+  }
+}
+
+.relation-gallery {
+  summary {
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    position: relative;
+    bottom: 20px;
+  }
+}
+
+.relation-gallery__images {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.relation-gallery__images app-image {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+// Vue mobile : icônes et descriptions les unes au-dessus des autres
+@media (max-width: $mobile-breakpoint) {
+  .relation-card {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .relation-row,
+  .relation-row--first,
+  .relation-row--second {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  // On garde l'icône sous ou au-dessus selon votre ordre mobile actuel
+  .relation-row--second {
+    gap: 0;
+
+    .speech-bubble {
+      order: 0;
+    }
+
+    .relation-icon-box {
+      order: 1;
+    }
+  }
+
+  .speech-bubble {
+    width: 100%;
+    height: 180px;
+
+    &--left-tail::before,
+    &--right-tail::after {
+      display: none;
+    }
+  }
+}

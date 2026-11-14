@@ -1,0 +1,141 @@
+<article class="relation-card" *ngIf="relation">
+    <!-- Ligne 1 : Icône à gauche | Description + 5 cœurs à droite -->
+    <div class="relation-row relation-row--first" *ngIf="firstOpinion">
+        <div class="relation-icon-box">
+            <a
+            [routerLink]="['/personnages', firstOpinion.authorId]"
+            [attr.aria-label]="'Voir le profil de ' + firstOpinion.authorId">
+                <img
+                    [src]="firstOpinion.iconPath"
+                    [alt]="'Icône de ' + firstOpinion.authorId"
+                    width="200"
+                    height="200">
+            </a>
+        </div>
+
+        <div class="speech-bubble speech-bubble--left-tail hearts-on-right">
+            <div class="bubble-scroll">
+                <p class="bubble-text">{{ firstOpinion.description }}</p>
+            </div>
+
+            <div
+                class="broken-hearts-column"
+                [attr.aria-label]="'Note : ' + firstOpinion.note + ' sur 10'"
+                [title]="firstOpinion.note + ' / 10'"
+            >
+                <span
+                class="broken-heart"
+                *ngFor="let state of getHearts(firstOpinion.note)"
+                [class.is-broken-full]="state === 'broken-full'"
+                [class.is-intact-full]="state === 'intact-full'"
+                [class.is-empty]="state === 'empty'"
+                [class.is-broken-shape]="isBrokenHeart(firstOpinion.note)"
+                aria-hidden="true"
+                >
+                    <svg viewBox="0 0 24 24" class="heart-svg">
+                        <!-- Cœur entier (notes >= 5) -->
+                        <path
+                        *ngIf="!isBrokenHeart(firstOpinion.note)"
+                        class="heart-intact"
+                        d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5
+                            2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09
+                            C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5
+                            C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"
+                        />
+
+                        <!-- Cœur brisé (notes < 5) -->
+                        <g *ngIf="isBrokenHeart(firstOpinion.note)">
+                        <path
+                            class="heart-broken-body"
+                            d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5
+                            2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09
+                            C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5
+                            C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"
+                        />
+                        <polyline
+                            class="heart-crack"
+                            points="12,5.2 10.2,8.5 13.2,11.2 10.5,14.8 12,21.2"
+                        />
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ligne 2 : 5 cœurs + Description à gauche | Icône à droite -->
+    <div class="relation-row relation-row--second" *ngIf="secondOpinion">
+        <div class="speech-bubble speech-bubble--right-tail hearts-on-left">
+            <div
+                class="broken-hearts-column"
+                [attr.aria-label]="'Note : ' + secondOpinion.note + ' sur 10'"
+                [title]="secondOpinion.note + ' / 10'"
+            >
+                <span
+                class="broken-heart"
+                *ngFor="let state of getHearts(secondOpinion.note)"
+                [class.is-broken-full]="state === 'broken-full'"
+                [class.is-intact-full]="state === 'intact-full'"
+                [class.is-empty]="state === 'empty'"
+                [class.is-broken-shape]="isBrokenHeart(secondOpinion.note)"
+                aria-hidden="true"
+                >
+                    <svg viewBox="0 0 24 24" class="heart-svg">
+                        <path
+                        *ngIf="!isBrokenHeart(secondOpinion.note)"
+                        class="heart-intact"
+                        d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5
+                            2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09
+                            C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5
+                            C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"
+                        />
+
+                        <g *ngIf="isBrokenHeart(secondOpinion.note)">
+                        <path
+                            class="heart-broken-body"
+                            d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5
+                            2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09
+                            C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5
+                            C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"
+                        />
+                        <polyline
+                            class="heart-crack"
+                            points="12,5.2 10.2,8.5 13.2,11.2 10.5,14.8 12,21.2"
+                        />
+                        </g>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="bubble-scroll">
+                <p class="bubble-text">{{ secondOpinion.description }}</p>
+            </div>
+        </div>
+
+        <div class="relation-icon-box">
+            <a
+            [routerLink]="['/personnages', secondOpinion.authorId]"
+            [attr.aria-label]="'Voir le profil de ' + secondOpinion.authorId">
+                <img
+                    [src]="secondOpinion.iconPath"
+                    [alt]="'Icône de ' + secondOpinion.authorId"
+                    width="200"
+                    height="200">
+                </a>
+        </div>
+    </div>
+
+    <!-- Galerie d'images de la relation -->
+    <details class="relation-gallery" *ngIf="relation.imagePaths.length">
+        <summary>En voir plus ({{ relation.imagePaths.length }} images)</summary>
+
+            <div class="relation-gallery__images">
+                <app-image
+                    *ngFor="let imgPath of relation.imagePaths; let i = index"
+                    [img]="imgPath"
+                    [alt]="'Illustration de la relation ' + relation.id"
+                    [artist]="relation.artists[i] ?? ''">
+                </app-image>
+            </div>
+    </details>
+</article>

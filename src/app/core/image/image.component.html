@@ -1,15 +1,23 @@
-<div class="image-wrapper" (click)="revealSpoiler()">
-    <img 
-        [src]="img" 
-        [alt]="alt" 
-        [class.blurred]="spoiler && !isRevealed">
+<div
+    class="image-wrapper"
+    [class.has-custom-size]="formattedWidth || formattedHeight"
+    [style.width]="formattedWidth"
+    [style.height]="formattedHeight"
+    (click)="revealSpoiler()"
+>
+    <img
+        [src]="img"
+        [alt]="alt"
+        [class.blurred]="spoiler && !isRevealed"
+        [class.has-custom-height]="!!formattedHeight"
+    />
 
     @if (spoiler && !isRevealed) {
         <div class="spoiler-overlay">
-        <span class="warning-badge">Contenu sensible<br>Sensitive content</span>
-        <span class="instruction">Cliquer pour afficher<br>Click to show</span>
+            <span class="warning-badge">Contenu sensible<br>Sensitive content</span>
+            <span class="instruction">Cliquer pour afficher<br>Click to show</span>
         </div>
     }
 
-    <span class="tooltip-text">Made by <a [href]="lien">{{artist}}</a></span>
+    <span class="tooltip-text">Made by <a [href]="lien">{{ artist }}</a></span>
 </div>

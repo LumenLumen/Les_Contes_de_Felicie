@@ -18,6 +18,8 @@ import { KermeComponent } from './liste/kerme/kerme.component';
 import { MedienComponent } from './liste/medien/medien.component';
 import { PigneComponent } from './liste/pigne/pigne.component';
 import { GrimgrimComponent } from './liste/grimgrim/grimgrim.component';
+import { HedychiumComponent } from './liste/hedychium/hedychium.component';
+import { SebanComponent } from './liste/seban/seban.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -35,7 +37,9 @@ const routes: Routes = [
   { path: 'kerme', component: KermeComponent},
   { path: 'medien', component: MedienComponent},
   { path: 'pigne', component: PigneComponent},
-  { path: 'grimgrim', component: GrimgrimComponent}
+  { path: 'grimgrim', component: GrimgrimComponent},
+  { path: 'hedychium', component: HedychiumComponent},
+  { path: 'seban', component: SebanComponent}
 ];
 
 @NgModule({
@@ -54,7 +58,9 @@ const routes: Routes = [
     KermeComponent,
     MedienComponent,
     PigneComponent,
-    GrimgrimComponent
+    GrimgrimComponent,
+    HedychiumComponent,
+    SebanComponent
   ],
   imports: [
     CommonModule,

@@ -20,12 +20,19 @@ h1, h2, h3 {
     text-align: center;
 }
 
-h1, h2 {
-    color: var(--accent-color-darker)
+h1 {
+    color: var(--accent-color-darker);
+    font-size: 2.5rem;
+} 
+
+h2 {
+    color: var(--accent-color-darker);
+    font-size: 2rem;
 }
 
 h3 {
     color: var(--accent-color);
+    font-size: 1.5rem;
 }
 
 p {

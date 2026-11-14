@@ -1,7 +1,8 @@
 :host {
-    display: block;
+    display: inline-block;
     position: relative;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .image-wrapper {
@@ -9,12 +10,23 @@
     overflow: hidden;
     display: block;
     width: 100%;
+    max-width: 100%;
+
+    &.has-custom-size {
+        max-width: none;
+    }
 }
 
 img {
     display: block;
     width: 100%;
+    height: auto;
     transition: filter 0.3s ease;
+
+    &.has-custom-height {
+        height: 100%;
+        object-fit: cover;
+    }
 
     &.blurred {
         filter: blur(20px);
@@ -37,7 +49,7 @@ img {
     cursor: pointer;
 
     .warning-badge {
-        background: #e74c3c;
+        background: var(--accent-color);
         color: #fff;
         font-weight: bold;
         font-size: 0.9rem;

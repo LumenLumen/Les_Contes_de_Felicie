@@ -10,6 +10,10 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/personnages/personnages.module').then(m => m.PersonnagesModule) 
     },
     { 
+        path: 'relations', 
+        loadChildren: () => import('./pages/relations/relations.module').then(m => m.RelationsModule)
+    },
+    { 
         path: 'worldbuilding', 
         loadChildren: () => import('./pages/worldbuilding/worldbuilding.module').then(m => m.WorldbuildingModule)
     },

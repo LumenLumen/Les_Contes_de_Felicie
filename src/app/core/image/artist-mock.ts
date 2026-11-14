@@ -120,5 +120,13 @@ export const ARTISTS : Artist[] = [
     {
         nom : "sugarcube",
         lien : "https://flightrising.com/main.php?p=lair&tab=userpage&id=288336"
+    },
+    {
+        nom : "AtlasMugged",
+        lien : "https://toyhou.se/AtlasMugged"
+    },
+    {
+        nom : "scudiq",
+        lien : "https://artfight.net/~juneberrybat"
     }
 ]

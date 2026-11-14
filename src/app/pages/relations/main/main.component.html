@@ -1,0 +1,131 @@
+<app-header></app-header>
+
+<h1>Relations</h1>
+
+<form class="filters-form" (ngSubmit)="applyFilters()">
+    <fieldset class="filters-group">
+        <legend>Personnages</legend>
+
+        <div class="filters-row">
+        <label class="filter-field">
+            <span>Personnage 1</span>
+            <select
+            name="char1"
+            [(ngModel)]="selectedChar1"
+            (change)="applyFilters()"
+            >
+            <option value="">— Tous —</option>
+            <option *ngFor="let charId of availableCharacters" [value]="charId">
+                {{ charId }}
+            </option>
+            </select>
+        </label>
+
+        <label class="filter-field">
+            <span>Personnage 2</span>
+            <select
+            name="char2"
+            [(ngModel)]="selectedChar2"
+            [disabled]="!selectedChar1"
+            (change)="applyFilters()"
+            >
+            <option value="">— Aucun (1 personnage) —</option>
+            <ng-container *ngFor="let charId of availableCharacters">
+                <option *ngIf="charId !== selectedChar1" [value]="charId">
+                {{ charId }}
+                </option>
+            </ng-container>
+            </select>
+        </label>
+        </div>
+    </fieldset>
+
+    <fieldset class="filters-group">
+        <legend>Nombre d'images</legend>
+
+        <div class="filters-row">
+        <label class="filter-field">
+            <span>Minimum</span>
+            <input
+            type="number"
+            name="minImages"
+            min="0"
+            step="1"
+            placeholder="Ex: 1"
+            [(ngModel)]="minImages"
+            (ngModelChange)="applyFilters()"
+            />
+        </label>
+
+        <label class="filter-field">
+            <span>Maximum</span>
+            <input
+            type="number"
+            name="maxImages"
+            min="0"
+            step="1"
+            placeholder="Ex: 5"
+            [(ngModel)]="maxImages"
+            (ngModelChange)="applyFilters()"
+            />
+        </label>
+        </div>
+    </fieldset>
+
+    <fieldset class="filters-group">
+        <legend>Note (0 à 10)</legend>
+
+        <div class="filters-row">
+        <label class="filter-field">
+            <span>Minimum</span>
+            <input
+            type="number"
+            name="minNote"
+            min="0"
+            max="10"
+            step="1"
+            placeholder="0"
+            [(ngModel)]="minNote"
+            (ngModelChange)="applyFilters()"
+            />
+        </label>
+
+        <label class="filter-field">
+            <span>Maximum</span>
+            <input
+            type="number"
+            name="maxNote"
+            min="0"
+            max="10"
+            step="1"
+            placeholder="10"
+            [(ngModel)]="maxNote"
+            (ngModelChange)="applyFilters()"
+            />
+        </label>
+        </div>
+
+        <label class="filter-checkbox">
+        <input
+            type="checkbox"
+            name="matchAllOpinions"
+            [(ngModel)]="matchAllOpinions"
+            (change)="applyFilters()"
+        />
+        <span>Exiger que les 2 avis respectent la note min/max</span>
+        </label>
+    </fieldset>
+</form>
+
+<p class="results-count">
+    {{ relations.length }} relation(s) affichée(s)
+</p>
+
+<app-relation
+    *ngFor="let relation of relations"
+    [relation]="relation">
+</app-relation>
+
+<p class="empty-state" *ngIf="relations.length === 0">
+    Aucune relation ne correspond à ces critères.
+</p>

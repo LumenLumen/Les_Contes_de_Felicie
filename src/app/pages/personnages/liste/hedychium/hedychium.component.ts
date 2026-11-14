@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { BasePersonnageComponent } from '../personnage.component';
 
 @Component({
-  imports: [],
+  standalone: false,
   selector: 'app-hedychium',
   styleUrl: './hedychium.component.scss',
   templateUrl: './hedychium.component.html',
 })
-export class HedychiumComponent {
+export class HedychiumComponent extends BasePersonnageComponent {
+  themeColor = '#242f24';
 }
