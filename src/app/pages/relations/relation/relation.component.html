@@ -134,8 +134,10 @@
                     *ngFor="let imgPath of relation.imagePaths; let i = index"
                     [img]="imgPath"
                     [alt]="'Illustration de la relation ' + relation.id"
-                    [artist]="relation.artists[i] ?? ''">
+                    [artist]="relation.artists[i] ?? ''"
+                    [height]="200">
                 </app-image>
             </div>
     </details>
 </article>
+<br><br>

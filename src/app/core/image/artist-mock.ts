@@ -128,5 +128,13 @@ export const ARTISTS : Artist[] = [
     {
         nom : "scudiq",
         lien : "https://artfight.net/~juneberrybat"
+    },
+    {
+        nom : "MaRuCatss",
+        lien : "https://toyhou.se/MaRuCatss"
+    },
+    {
+        nom : 'Iruqua',
+        lien : 'https://iruqua.carrd.co/'
     }
 ]

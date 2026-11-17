@@ -199,8 +199,7 @@ $mobile-breakpoint: 768px;
 }
 
 .relation-gallery__images app-image {
-  flex: 1 1 0;
-  min-width: 0;
+  flex: 0 0 200px;
 }
 
 // Vue mobile : icônes et descriptions les unes au-dessus des autres

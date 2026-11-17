@@ -1,0 +1,15 @@
+:host {
+    --bg-color: #91ba82;
+    --main-color: #1a5a67;
+    --secondary-color : #228d8f;
+    --tertiary-color: #3f5c37;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color);
+    text-shadow: 0px 0px 4px var(--secondary-color);
+}
+
+p {
+    color: var(--tertiary-color);
+}
