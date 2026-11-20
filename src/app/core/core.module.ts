@@ -9,6 +9,7 @@ import { EncadreComponent } from './encadre/encadre.component';
 import { FlexboxComponent } from './flexbox/flexbox.component';
 import { BackarrowComponent } from './backarrow/backarrow.component';
 import { PopupComponent } from './popup/popup.component';
+import { CharcardComponent } from './charcard/charcard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PopupComponent } from './popup/popup.component';
     EncadreComponent,
     FlexboxComponent,
     BackarrowComponent,
-    PopupComponent
+    PopupComponent,
+    CharcardComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { PopupComponent } from './popup/popup.component';
     EncadreComponent,
     FlexboxComponent,
     BackarrowComponent,
-    PopupComponent
+    PopupComponent,
+    CharcardComponent
   ]
 })
 export class CoreModule { }

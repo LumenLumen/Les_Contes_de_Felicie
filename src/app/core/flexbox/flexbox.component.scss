@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin: 1.5rem 0;
+    padding: 5px;
 
     &.reverse {
         flex-direction: row-reverse;
@@ -10,8 +10,8 @@
 }
 
 .flex-row__media {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 auto;
+    max-width: 33%;
 }
 
 .flex-row__media img {

@@ -136,5 +136,9 @@ export const ARTISTS : Artist[] = [
     {
         nom : 'Iruqua',
         lien : 'https://iruqua.carrd.co/'
+    },
+    {
+        nom : "Easy",
+        lien : "https://ko-fi.com/easypsealemon"
     }
 ]
